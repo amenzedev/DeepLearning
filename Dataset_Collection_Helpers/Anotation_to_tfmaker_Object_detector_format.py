@@ -35,12 +35,12 @@ for file in arr:
             #print((left,top),(right,bottom))
             
             if(file_counter in validation_set):                
-                string_out = "VALIDATE,door_dataset/"+image_file+",door,"+str(left)+","+str(top)+","+str(right)+","+str(bottom)+"\n"
+                string_out = "VALIDATE,door_dataset/"+image_file+",door,"+str(left)+","+str(top)+","+str(right)+","+str(bottom)+",,"
             elif(file_counter in testing_set):      
                 #print(file_counter)          
-                string_out = "TEST,door_dataset/"+image_file+",door,"+str(left)+","+str(top)+","+str(right)+","+str(bottom)+"\n"
+                string_out = "TEST,door_dataset/"+image_file+",door,"+str(left)+","+str(top)+","+str(right)+","+str(bottom)+",,"
             else:                
-                string_out = "TRAIN,door_dataset/"+image_file+",door,"+str(left)+","+str(top)+","+str(right)+","+str(bottom)+"\n"
+                string_out = "TRAIN,door_dataset/"+image_file+",door,"+str(left)+","+str(top)+","+str(right)+","+str(bottom)+",,"
         
             out_file.write(string_out)
             #print((left,top),(right,bottom))
